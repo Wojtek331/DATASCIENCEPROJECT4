@@ -60,7 +60,7 @@ print(datasummary)
 
 **Designated place**: type one or two sentences describing this table of a fellow student below. For example, comment on the mean and median growth of both groups. Then stage, commit and push it to their github repository. 
 
-The mean of the growth is higher in in the countries that have no revolution = 2.46 than the countries that had revolution = 1.68, and the median value is also higher for the countries where there was no revolution 2.29, as they have slow steady growth, whereas in the revolution one 1.92 there is often a high jump rather than slow steady growth. In both we observe that countries with revolution have lower median and mean as the growth rate can increase a lot during shorter period rather than continues growth.
+
 
 ### Part 3: Make a table summarizing reressions using modelsummary and kable
 
@@ -85,7 +85,7 @@ $$
 $$
 
 **Question 3.3**: What do you think the purpose of including the variable `rgdp60` is? Look at `?GrowthSW` to find out what the variables mean. 
-The value means the GDP per capita in 1960, converted to 1960 US dollars, AS you need this as a base level to see how it changes the output in the future for longer period of time. Also USA had the highest GDP in 1960 in USD out of all countries, therefore it is a good estimate and currency to compare and to see the changes as the currency is a pretty stable one for a long period of time and most likely you want to compare to something that is the easiest to compare and as the currency of the leading country was USD it might be beneficial to keep it like that as all of the governmental data in USA is mostly stated in USA. The year is also a pretty good choice to choose and see the changes, as the World Wars were over and the economy and GDP's started to become more stable, as the uncertainty in the world became to be lower and there were no as big and vital events after the Wars, so it is a good time to compare the values to, to see how the economy and in this case especially GDP is changing. Another thing is that GDP or gdp growth is also one of the variables and measures of how economy is performing that might contribute to economic growth, therefore by looking at the values we might find a basic understanding of the potential economic growth or stability or overal performance that might be related to gdp once again by looking whether the values would change over the time will again indicate the overall look of the economy comparing to 1960. Also in the above model it shows that it is one of the factors that contribute to economic growth. 
+The value means the GDP per capita in 1960, converted to 1960 US dollars, AS you need this as a base level to see how it changes the output in the future for longer period of time. Also USA had the highest GDP in 1960 in USD out of all countries, therefore it is a good estimate and currency to compare and to see the changes as the currency is a pretty stable one for a long period of time and most likely you want to compare to something that is the easiest to compare and as the currency of the leading country was USD it might be beneficial to keep it like that as all of the governmental data in USA is mostly stated in USA. The year is also a pretty good choice to choose and see the changes, as the World Wars were over and the economy and GDP's started to become more stable, as the uncertainty in the world became to be lower and there were no as big and vital events after the Wars, so it is a good time to compare the values to, to see how the economy and in this case especially GDP is changing. Another thing is that GDP or gdp growth is also one of the variables and measures of how economy is performing that might contribute to economic growth, therefore by looking at the values we might find a basic understanding of the potential economic growth or stability or overal performance that might be related to gdp once again by looking whether the values would change over the time will again indicate the overall look of the economy comparing to 1960. 
 
 
 We now want to estimate a stepwise model. Stepwise means that we first estimate a univariate regression $\text{growth}_i = \beta_0 + \beta_1 \cdot \text{treat}_i + \epsilon_i$, and in each subsequent model, we add one control variable. 
@@ -120,23 +120,18 @@ according to this analysis education is the main driver of economic growth, as i
 ```{r}
 library(kableExtra)
 library(modelsummary)
-list(model1, model2, model3, model4) |>
+table <- list(model1, model2, model3, model4)|>
   modelsummary(stars=T, gof_map = c("nobs", "r.squared")) |>
   kable_styling() |>
   row_spec(row = 3, background = "red", color = "white") |>
   row_spec(row = 4, background = "red", color ="white") 
+print(table)
 ```
 
-**Question 3.8**: Write a piece of code that exports this table (without the formatting) to a Word document. 
+**Question 3.8**: Write a piece of code that exports this table (without the formatting) to a Word document.
 
 ```{r}
-library(flextable)
-library(officer)
-data(GrowthSW)
-flex_tbl <- flextable(GrowthSW)
-doc <- read_docx()
-doc <- body_add_flextable(doc, value = flex_tbl)
-print(doc, target = "GrowthSW_Table.docx")
+sjPlot::tab_df(table, file = "Tableex3.8.doc")
 ```
 
 ## The End
