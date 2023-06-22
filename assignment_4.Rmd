@@ -6,7 +6,7 @@ title: |
 author: |
   | Wojciech Deska
   | w.p.deska@students.uu.nl
-  | http://www.github.com/yourgithubname
+  | https://github.com/Wojtek331
 date: April 2023
 urlcolor: purple
 linkcolor: purple
@@ -32,7 +32,7 @@ This interpretation will not be graded, but a Github shows the contributors to a
 
 **Question 1.1**: Fill in the __github username__ of the class mate to whose repository you have contributed. 
 
-[Fill in here]
+Username of class mate: MCPdeHaan
 
 ### Part 2: Analyzing various linear models
 
@@ -60,6 +60,7 @@ print(datasummary)
 
 **Designated place**: type one or two sentences describing this table of a fellow student below. For example, comment on the mean and median growth of both groups. Then stage, commit and push it to their github repository. 
 
+The mean of the growth is higher in in the countries that have no revolution = 2.46 than the countries that had revolution = 1.68, and the median value is also higher for the countries where there was no revolution 2.29, as they have slow steady growth, whereas in the revolution one 1.92 there is often a high jump rather than slow steady growth. In both we observe that countries with revolution have lower median and mean as the growth rate can increase a lot during shorter period rather than continues growth.
 
 ### Part 3: Make a table summarizing reressions using modelsummary and kable
 
