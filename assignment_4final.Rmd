@@ -60,7 +60,7 @@ datasummary
 
 **Designated place**: type one or two sentences describing this table of a fellow student below. For example, comment on the mean and median growth of both groups. Then stage, commit and push it to their github repository. 
 
-Comment by Maurits de Haan on the table of Wojciech: If I look at the table of Wojtek, I see the that the value for GDP per capita in 1960 was 5283.32 on average for countries that had now revolutions and over two times smaller for countries that had a revolution (1988.67). This is logical, since the reason why a revolution occurred is often that something (often the economy) underperformed or the revolution had a big effect on the internal and external economy in a country, as shown by the lower average GDP per capita in 1960 for countries that had one or more revolutions.
+Comment by Maurits de Haan on the table of Wojciech, last updated in the 23rd of June: If I look at the table of Wojtek, I see the that the value for GDP per capita in 1960 was 5283.32 on average for countries that had now revolutions and over two times smaller for countries that had a revolution (1988.67). This is logical, since the reason why a revolution occurred is often that something (often the economy) underperformed or the revolution had a big effect on the internal and external economy in a country, as shown by the lower average GDP per capita in 1960 for countries that had one or more revolutions.
 
 ### Part 3: Make a table summarizing reressions using modelsummary and kable
 
